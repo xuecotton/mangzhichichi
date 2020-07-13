@@ -1,0 +1,39 @@
+<view class="container">
+    <view class="top">
+        <!-- <image class="bg" src="../../images/userbg.jpg"></image> -->
+        <button wx:if="{{!isLogin}}" open-type="getUserInfo" bindgetuserinfo="getUser">授权登录</button>
+        <view class="avatar" wx:else="{{!isLogin}}">
+            <image src="{{userInfo.avatarUrl}}" ></image>
+        </view>
+    </view>
+    <view class="main">
+        <view class="main_box">
+            <navigator url="../collect/collect" open-type="navigate">
+                <view class="item">
+                    <view>收藏</view>
+                    <image src="../../images/next.png"></image>
+                </view>
+            </navigator>
+            
+            <button class="item btn" open-type="contact" size="default" type="default">
+                    <view>联系我们</view>
+                    <image src="../../images/next.png"></image>
+            </button>
+            
+            
+                <button class="item btn" open-type="share" size="default">
+                    <view >推荐给好友</view>
+                    <image src="../../images/next.png"></image>
+                </button>
+            
+            
+            <navigator url="../about/about" open-type="navigate">
+                <view class="item">
+                    <view>声明</view>
+                    <image src="../../images/next.png"></image>
+                </view>
+            </navigator>
+            
+        </view>
+    </view>
+</view>

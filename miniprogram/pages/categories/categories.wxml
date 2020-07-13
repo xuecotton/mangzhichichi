@@ -1,0 +1,34 @@
+<!--pages/categories/categories.wxml-->
+<!-- 引入组件 -->
+<import src="../../template/label/label.wxml" />
+<view class="container">
+    <!-- 顶部搜索栏开始 -->
+    <view class="search">
+        <view class="input">
+            <image calss="sousuo_icon" src="../../images/sousuo.png"></image>
+            <input type="text" placeholder="请输入菜谱或菜名" focus="{{inputShow}}" bindfocus="toSearchList">
+        </input>
+        </view>
+    </view>
+    <!--顶部搜索栏结束  -->
+<!-- 左侧导航栏开始 -->
+<view class="left_bar">
+    <view class="left_list">
+        <view data-current="0" class="{{currentTab==0?selected:''}}" bindtap="clickTab">养生功效</view>
+        <view data-current="1" class="{{currentTab==1?selected:''}}" bindtap="clickTab">适宜人群</view>
+        <view data-current="2" class="{{currentTab==2?selected:''}}" bindtap="clickTab">病补</view>
+        <view data-current="3" class="{{currentTab==3?selected:''}}" bindtap="clickTab">体质</view>
+        <view data-current="4" class="{{currentTab==4?selected:''}}" bindtap="clickTab">菜系</view>
+        <view data-current="5" class="{{currentTab==5?selected:''}}" bindtap="clickTab">小吃</view>
+        <view data-current="6" class="{{currentTab==6?selected:''}}" bindtap="clickTab">菜品</view>
+        <view data-current="7" class="{{currentTab==7?selected:''}}" bindtap="clickTab">口味</view>
+        <view data-current="8" class="{{currentTab==8?selected:''}}" bindtap="clickTab">加工工艺</view>
+        <view data-current="9" class="{{currentTab==9?selected:''}}" bindtap="clickTab">厨房用品</view>
+        <view data-current="10" class="{{currentTab==10?selected:''}}" bindtap="clickTab">场景</view>
+        <view></view>
+    </view>
+</view>
+<!-- 左侧导航栏结束 -->
+<template is="label" data='{{...items}}'></template>
+
+</view>

@@ -1,0 +1,83 @@
+/* template/biglist/biglist.wxss */
+.main{
+    margin-top: 20rpx;
+    width: 745rpx;
+    height: auto;
+    /* border: 1rpx solid red; */
+    background-color: #fff;
+  }
+  .main_title{
+    width: 90%;
+    height: 50rpx;
+    margin :0 auto;
+    /* border: 1rpx solid #000; */
+    text-align: center;
+    font-weight: 700;
+  }
+  .main_title>text{
+    font-size: 36rpx;
+    padding-top:15rpx;
+  }
+  .main_title>text::before{
+    content:'-'
+  }
+  .main_title>text::after{
+    content:'-'
+  }
+  .main_list{
+    width: 90%;
+    margin:0 auto;
+    /* border: 1rpx solid red; */
+  }
+  .main_item{
+    width: 100%;
+    height: 500rpx;
+    /* border:1rpx solid #000; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding:25rpx 0;
+    border-bottom: 1rpx;
+  }
+  .item_pic{
+    width: 100%;
+    height: 400rpx;
+    /* border: 1rpx solid #aea; */
+  }
+  .item_pic>image{
+    width: 100%;
+    height: 100%;
+  }
+  .item_title{
+    width: 100%;
+    height: 46rpx;
+    padding:5rpx;
+    margin-top: 25rpx;
+    
+    /* border: 1rpx solid red; */
+  }
+  .item_title>text{
+    width: 100%;
+    font-size: 36rpx;
+    font-weight: 700;
+    color: #000;
+    letter-spacing: 1.5rpx;
+    
+  }
+  .item_desc{
+    width: 100%;
+    height: 40rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding:10rpx 0;
+  }
+  .item_desc>text{
+    font-size: 28rpx;
+    color:#999;
+    margin:10rpx 25rpx;
+  
+  }
+  
+  /* 列表项结束 */

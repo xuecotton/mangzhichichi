@@ -1,0 +1,64 @@
+{
+    "pages": [
+        
+        "pages/categories/categories",
+        "pages/search/search",
+        "pages/index/index",
+        
+        "pages/articles/articles",
+        "pages/artDesc/artDesc",
+        "pages/user/user",
+        "pages/collect/collect",
+
+
+        "pages/upload/upload",
+        "pages/comment/comment",
+        "pages/choiceness/choiceness",
+        "pages/about/about",
+        "template/list/list",
+        "template/label/label",
+        "template/biglist/biglist"
+        
+    ],
+    "window": {
+        "backgroundColor": "#eee",
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#ffdb01",
+        "enablePullDownRefresh":true,
+        "navigationBarTitleText": "茫之吃吃",
+        "navigationBarTextStyle": "black"
+    },
+    
+    "tabBar":{
+        "color":"#aaa",
+        "selectedColor":"#ffdb01",
+        "list":[
+            {
+                "pagePath":"pages/index/index",
+                "text":"主页",
+                "iconPath":"images/zhuye_un.png",
+                "selectedIconPath":"images/zhuye.png"
+            },
+            {
+            "pagePath":"pages/categories/categories",
+            "text":"分类",
+            "iconPath":"images/classify_un.png",
+            "selectedIconPath":"images/classify.png"
+            },
+            {
+                "pagePath":"pages/articles/articles",
+                "text":"分享",
+                "iconPath":"images/wz_un.png",
+                "selectedIconPath":"images/wz.png"
+            },
+            {
+                "pagePath":"pages/user/user",
+                "text":"用户",
+                "iconPath":"images/user_un.png",
+                "selectedIconPath":"images/user.png"
+            }
+    ]
+    },
+    "sitemapLocation": "sitemap.json",
+    "style": "v2"
+}

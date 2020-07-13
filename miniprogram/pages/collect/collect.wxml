@@ -1,0 +1,11 @@
+<!--pages/collect/collect.wxml-->
+<import src="../../template/list/list.wxml" />
+<view class="container">
+<!-- 上方选显卡开始 -->
+  <view class="top_bar">
+    <view id="collect" class="{{selected_collect==1?selected:disabled}}" bindtap="shoucang">我的收藏</view>
+    <view id="views" class="{{selected_collect==2?selected:disabled}}" bindtap="jilu">我的分享</view>
+  </view>
+<!-- 上方选显卡结束 -->
+<template is="list" ></template>
+</view>

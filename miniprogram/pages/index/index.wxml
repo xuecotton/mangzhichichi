@@ -1,0 +1,130 @@
+<!--index.wxml-->
+<view class="container">
+<!-- 顶部搜索栏开始 -->
+  <view class="search">
+    <view class="classify" bindtap="toclassify">
+      <image class="classify" src="../../images/fenlei.png"></image>
+    </view>
+    <view class="input" >
+      <image class="sousuo_icon" src="../../images/sousuo.png"></image>
+      <input type="text" placeholder="请输入菜谱或菜名" focus="{{inputShow}}" bindfocus="toSearchList">
+      </input>
+    </view>
+    </view>
+    <!--顶部搜索栏结束  -->
+    <!-- 轮播图开始 -->
+    <view class="swiper_box">
+      <swiper autoplay="true"
+      indicator-dots="true"
+      indicator-color="#333"
+      indicator-active-color="#fff"
+      circular="true"
+      class="swipers">
+        <swiper-item wx:for="{{carousel}}" wx:key="index">
+          <image mode="aspectFill" src="{{item.pic}}"></image>
+        </swiper-item>
+        
+      </swiper>
+    </view>
+    <!-- 轮播图结束 -->
+    <!-- 上部推荐开始 -->
+    <view class="comment">
+  <view class="top_comment">
+    <view class="sancan" data-com-id="0" bindtap="navTosancan">
+      <view class="comment_title">
+        <text>早中晚餐</text>
+        <text>每日三餐推荐</text>
+      </view>
+      <view class="comment_img">
+        <image src="../../images/sancan.png" mode='aspectFit'></image>
+      </view>
+    </view>
+    <view class="jingpin" data-com-id="1" bindtap="navTo">
+      <view class="comment_title">
+        <text>精品推荐</text>
+        <text>一周精选菜谱</text></view>
+      <view class="comment_img">
+        <image src="../../images/shoucangbiaoqian.png" mode='aspectFit'></image>
+      </view>
+    </view>
+  </view>
+  <!-- <view class="hot_comment">
+    <view class="hot_title">
+      <text>热门推荐</text>
+      <text bindtap="toclass">查看更多</text>
+    </view>
+    <view class="hot_cell">
+      <view>
+        <image src="../../images/comment_bg.jpg"></image>
+        <text>凉菜</text>
+      </view>
+      <view>
+        <image src="../../images/comment_bg.jpg"></image>
+        <text>凉菜</text>
+      </view>
+      <view>
+        <image src="../../images/comment_bg.jpg"></image>
+        <text>凉菜</text>
+      </view>
+      <view>
+        <image src="../../images/comment_bg.jpg"></image>
+        <text>凉菜</text>
+      </view>
+    </view>
+  </view> -->
+
+
+ </view>
+<!-- 上部推荐结束 -->
+<!-- 列表开始 -->
+
+<view class="main">
+<!-- 列表标题 -->
+  <view class="main_title">
+    <text>本周佳作</text>
+  </view>
+  <view class="main_list">
+  <!-- 列表项 -->
+    <view class="main_item">
+      <view class="item_pic">
+        <image src="../../images/swiper01.jpg"></image>
+      </view>
+      <view class="item_title">
+        <text>夏日必备清凉解暑苦瓜炒蛋</text>
+      </view>
+      <view class="item_desc">
+        <text class="author">鲨雕鱼半藏</text>
+        <text class="collection">555收藏</text>
+        <text class="views_num">6.6万浏览</text>
+      </view>
+    </view>
+    <view class="main_item">
+      <view class="item_pic">
+        <image src="../../images/swiper01.jpg"></image>
+      </view>
+      <view class="item_title">
+        <text>夏日必备清凉解暑苦瓜炒蛋</text>
+      </view>
+      <view class="item_desc">
+        <text class="author">鲨雕鱼半藏</text>
+        <text class="collection">555收藏</text>
+        <text class="views_num">6.6万浏览</text>
+      </view>
+    </view>
+    <view class="main_item">
+      <view class="item_pic">
+        <image src="../../images/swiper01.jpg"></image>
+      </view>
+      <view class="item_title">
+        <text>夏日必备清凉解暑苦瓜炒蛋</text>
+      </view>
+      <view class="item_desc">
+        <text class="author">鲨雕鱼半藏</text>
+        <text class="collection">555收藏</text>
+        <text class="views_num">6.6万浏览</text>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 列表开始 -->
+</view>

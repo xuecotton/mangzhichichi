@@ -1,0 +1,12 @@
+<view class="container">
+    <view class="title">
+        <text>内容声明</text>
+    </view>
+    <view class="inner">
+        <text>忙之吃吃微信小程序，仅为本人练习时使用，不会进行任何商业盈利行为。</text>
+        <text>本项目中样式借鉴了大量同类型小程序及APP，但所有功能及后台为本人创作。如若给您带来了不便，请您联系作者，项目会及时下架。</text>
+        <text>联系方式:意五二啾啾啾佴妖⑥龄棋</text>
+        <text></text>
+        <text></text>
+    </view>
+</view>

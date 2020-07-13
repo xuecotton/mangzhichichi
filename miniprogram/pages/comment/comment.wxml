@@ -1,0 +1,14 @@
+<import src="../../template/list/list.wxml" />
+<view class="container">
+<!-- 上方选显卡开始 -->
+  <view class="top_bar">
+    <view data-current="0" class="{{currentTab==0?selected:''}}" bindtap="clickTab">早餐</view>
+    <view data-current="1" class="{{currentTab==1?selected:''}}" bindtap="clickTab">午餐</view>
+    <view data-current="2" class="{{currentTab==2?selected:''}}" bindtap="clickTab">晚餐</view>
+  </view>
+<!-- 上方选显卡结束 -->
+
+<template is="list" data="{{title:'1',price:'1000'}}" wx:if="{{currentTab==0}}">1</template>
+<template is="list" data="{{title:'2',price:'2000'}}" wx:elif="{{currentTab==1}}">2</template>
+<template is="list" data="{{title:'3',price:'3000'}}" wx:else="{{currentTab==2}}">3</template>
+</view>

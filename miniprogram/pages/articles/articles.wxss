@@ -1,0 +1,136 @@
+/* 搜索栏样式开始 */
+.container{
+    background-color: #eee;
+}
+.search{
+    width: 750rpx;
+    height: 90rpx;
+    position: fixed;
+    background-color: #000;
+    display: flex;
+    justify-content:start;
+    align-items: center;
+  }
+  .input{
+    width: 650rpx;
+    height: 60rpx;
+    margin:0 auto; 
+    position: relative;
+  }
+  .input>image{
+    width: 40rpx;
+    height: 40rpx;
+    position: absolute;
+    top:15rpx;
+    left: 50rpx;
+    transform: translateX(-25rpx);
+  }
+  .search>.input>input{
+    width: 580rpx;
+    height: 40rpx;
+    background-color: #eee;
+    /* border: 1rpx solid #f00; */
+    border-radius: 10rpx;
+    padding:10rpx 0;
+    padding-left:80rpx;
+    /* 首行缩进 */
+    
+    letter-spacing: 2rpx;
+  }
+  /* 搜索栏样式结束 */
+
+  /* 瀑布流样式开始 */
+  .waterlist{
+      width: 700rpx;
+      height: auto;
+      /* border: 1rpx solid red; */
+      padding: 25rpx 0;
+      margin:90rpx auto 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      
+  }
+.left,.right{
+    width: 335rpx;
+    height: auto;
+    /* border: 1rpx solid #e0e; */
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center; */
+}
+.item{
+    width: 100%;
+    /* height: auto; */
+    border-radius: 15rpx;
+    /* border: 1rpx solid #aea; */
+    display: flex;
+    flex-direction: column;
+    margin-top: 30rpx;
+    background-color: #fff;
+}
+.fengmian{
+    width: 100%;
+    /* height: auto; */
+    /* height: auto; */
+    border-top-left-radius: 15rpx;
+    border-top-right-radius: 15rpx;
+}
+.desc{
+    margin : 15rpx 0;
+    padding: 0 15rpx;
+}
+.title{
+    font-size: 30rpx;
+    font-weight: 700;
+    color: #000;
+}
+.author{
+    height: 50rpx;
+    /* border: 1rpx solid #000; */
+    margin-top: 15rpx;
+    padding: 0 15rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.avatar{
+    width: 50rpx;
+    height: 50rpx;
+    border-radius: 50%;
+    /* margin-bottom: 25rpx; */
+    /* border: 1rpx solid #e0e; */
+    /* border-width: 1rpx; */
+}
+.author>text{
+    font-size: 24rpx;
+    color: #aaa;
+    margin-left: 15rpx;
+}
+  /* 瀑布流样式结束 */
+
+  /* 书写按钮 */
+  .write{
+      width: 150rpx;
+      height: 36rpx;
+      padding:10rpx;
+      border-radius:28rpx;
+      background-color: darkgreen;
+      position: fixed;
+      bottom: 35rpx;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+  }
+  .write>image{
+      width: 30rpx;
+      height: 30rpx;
+      color: white;
+  }
+  .write>text{
+      font-size: 30rpx;
+      color: white;
+  }

@@ -1,0 +1,58 @@
+/* pages/upload/upload.wxss */
+.top{
+    width: 750rpx;
+    height: 500rpx;
+    padding-left: 45rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    
+}
+.pic{
+    width: 100rpx;
+    height: 100rpx;
+    border: 1rpx dashed #999;
+    position: relative;
+}
+.upbtn{
+    position: relative;
+    width: 50rpx;
+    height: 50rpx;
+    left: 25rpx;
+    top: 25rpx;
+}
+.okbtn{
+    width: 50rpx;
+    height: 50rpx;
+    position: absolute;
+    top:13px;
+    right: -100rpx;
+}
+
+.title>input{
+   width: 700rpx;
+   height: 90rpx;
+}
+.desc{
+    width: 700rpx;
+    height: 280rpx;
+}
+
+.submit{
+    width: 750rpx;
+    height: 90rpx;
+    position: fixed;
+    bottom:100rpx;
+}
+.submit>view{
+    width: 600rpx;
+    height: 90rpx;
+    /* padding:20rpx 0 ; */
+    margin:0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgreen;
+    border-radius: 45rpx;
+}

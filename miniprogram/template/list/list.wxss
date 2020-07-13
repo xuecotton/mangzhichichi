@@ -1,0 +1,49 @@
+/* 列表样式开始 */
+.list{
+    box-sizing: border-box;
+    background-color: #fff;
+    width: 748rpx;
+    height: auto;
+    /* border: 1rpx solid #000; */
+    padding:20rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+.item{
+    width: 700rpx;
+    height:240rpx;
+    /* border:1rpx solid #eae; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.item>image{
+    height: 240rpx;
+    width: 300rpx;
+    /* border: 1rpx solid #afa; */
+}
+.desc{
+    width: 380rpx;
+    height: 240rpx;
+    /* border: 1rpx solid #faf; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+.desc>text:nth-child(1){
+    font-size: 32rpx;
+    font-weight: 700;
+}
+.desc>text:nth-child(2){
+    font-size: 28rpx;
+    font-weight: 600;
+}
+.desc>text:nth-child(3){
+    font-size: 24rpx;
+    color: #999;
+}
+
+/* 列表样式结束 */

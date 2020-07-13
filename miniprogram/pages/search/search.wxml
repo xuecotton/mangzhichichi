@@ -1,0 +1,18 @@
+<!--pages/search/search.wxml-->
+<!-- 引入列表组件 -->
+<import src="../../template/list/list.wxml" />
+<view class="container">
+    <!-- 顶部搜索栏开始 -->
+    <view class="search">
+        <view class="input">
+            <image calss="sousuo_icon" src="../../images/sousuo.png"></image>
+            <input type="text" placeholder="请输入菜谱或菜名" value='{{value}}' focus="false" bindinput="getValue">
+            </input>
+            <button bindtap="sendRequest">提交</button>
+        </view>
+    </view>
+    <!--顶部搜索栏结束  -->
+    <!-- 列表组件 -->
+<template is="list" class="list"></template>
+    <!-- 列表组件 -->
+</view>

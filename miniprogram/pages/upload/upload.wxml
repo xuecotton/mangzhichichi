@@ -1,0 +1,20 @@
+<!--pages/upload/upload.wxml-->
+<view class="container">
+    <view class="top">
+        <view class="pic" bindtap="uppic">
+        <image class="upbtn" src="../../images/xj.png"></image>
+        <image class="okbtn" src="../../images/ok.png" wx:if="{{isok}}"></image>
+        </view>
+        
+        <view class="title">
+            <input placeholder="标题" maxlength="16" bindinput="updateValue" data-name="title" value="{{title}}"></input>
+        </view>
+        <view class="desc">
+            <textarea placeholder="内容" maxlength="500" bindinput="updateValue" data-name="desc" value="{{desc}}">
+            </textarea>
+        </view>
+    </view>
+    <view class='submit' bindtap="upDB">
+        <view><text>发布</text></view>
+    </view>
+</view>

@@ -1,0 +1,52 @@
+<!-- 大显示栏 -->
+<template name="biglist">
+    <!-- 列表标题 -->
+<view class="main">
+  <view class="main_title">
+    <text>{{title}}</text>
+  </view>
+  <view class="main_list">
+  <!-- 列表项 -->
+    <view class="main_item">
+      <view class="item_pic">
+        <image src="../../images/swiper01.jpg"></image>
+      </view>
+      <view class="item_title">
+        <text>夏日必备清凉解暑苦瓜炒蛋</text>
+      </view>
+      <view class="item_desc">
+        <text class="author">鲨雕鱼半藏</text>
+        <text class="collection">555收藏</text>
+        <text class="views_num">6.6万浏览</text>
+      </view>
+    </view>
+    <view class="main_item">
+      <view class="item_pic">
+        <image src="../../images/swiper01.jpg"></image>
+      </view>
+      <view class="item_title">
+        <text>夏日必备清凉解暑苦瓜炒蛋</text>
+      </view>
+      <view class="item_desc">
+        <text class="author">鲨雕鱼半藏</text>
+        <text class="collection">555收藏</text>
+        <text class="views_num">6.6万浏览</text>
+      </view>
+    </view>
+    <view class="main_item">
+      <view class="item_pic">
+        <image src="../../images/swiper01.jpg"></image>
+      </view>
+      <view class="item_title">
+        <text>夏日必备清凉解暑苦瓜炒蛋</text>
+      </view>
+      <view class="item_desc">
+        <text class="author">鲨雕鱼半藏</text>
+        <text class="collection">555收藏</text>
+        <text class="views_num">6.6万浏览</text>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 列表开始 -->
+</template>

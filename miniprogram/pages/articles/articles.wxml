@@ -1,0 +1,51 @@
+<view class="container">
+     <!-- 顶部搜索栏开始 -->
+    <view class="search">
+        <view class="input">
+            <image calss="sousuo_icon" src="../../images/sousuo.png"></image>
+            <input type="text" placeholder="请输入菜谱或菜名" focus="false">
+        </input>
+        </view>
+    </view>
+    <!--顶部搜索栏结束  -->
+    <!-- 瀑布流简版开始 -->
+    <view class="waterlist" wx:if="{{articles.length>0}}">
+        <view class="left">
+            <view  wx:for="{{articles}}" wx:key="index">
+            <!-- 自定义属性 获取id -->
+                <view class="item" wx:if="{{index%2==0}}" data-id="{{item._id}}"  bindtap="navToDesc">
+                    <image class="fengmian" src="{{item.pic}}" mode="widthFix"></image>
+                    <view class="desc">
+                        <view class="title">{{item.title}}</view>
+                        <view class="author">
+                            <image class="avatar" src="{{item.avatar}}"></image>
+                            <text>{{item.nickName}}</text>
+                        </view>
+                    </view>
+                </view> 
+            </view>
+        </view>
+        <view class="right">
+            <view  wx:for="{{articles}}" wx:key="index">
+                <view class="item" wx:if="{{index%2==1}}" data-id="{{item._id}}"  bindtap="navToDesc">
+                    <image class="fengmian" src="{{item.pic}}"></image>
+                    <view class="desc">
+                        <view class="title">{{item.title}}</view>
+                        <view class="author">
+                            <image class="avatar" src="{{item.avatar}}"></image>
+                            <text>{{item.nickName}}</text>
+                        </view>
+                    </view>
+                </view> 
+            </view>
+        </view>
+    </view>
+    <!-- 瀑布流简版结束 -->
+
+    <!-- 悬浮写文章按钮开始 -->
+    <view class="write" bindtap="toup">
+        <image src="../../images/write.png"></image>
+        <text>写笔记</text>
+    </view>
+    <!-- 悬浮写文章按钮结束 -->
+</view>

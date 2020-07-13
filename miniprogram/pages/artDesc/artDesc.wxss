@@ -1,0 +1,63 @@
+/* pages/artDesc/artDesc.wxss */
+/* 上部图片显示开始 */
+
+.container{
+    width: 100%;
+    height: 100%;
+
+}
+.top{
+    width: 100%;
+    height: 480rpx;
+}
+.top>image{
+    width: 100%;
+    height: 100%;
+}
+/* 上部图片显示结束 */
+
+/* 个人信息区域开始 */
+.userInfo{
+    width: 748rpx;
+    height: 90rpx;
+    padding: 0 25rpx;
+    /* border:1rpx solid #dad; */
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+}
+.userInfo>image{
+    width: 80rpx;
+    height: 80rpx;
+    margin:0 25rpx;
+    /* border: 1rpx solid #ada; */
+    border-radius: 40rpx;
+}
+.userInfo>view{
+    font-size: 36rpx;
+    color: #000;
+}
+/* 个人信息区域结束 */
+/* 文章正文开始 */
+.main{
+    width: 700rpx;
+    height: auto;
+    margin:25rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    /* border: 1rpx solid #dad; */
+}
+.title{
+    font-size: 36rpx;
+    font-weight: 700;
+    letter-spacing: 1.2;
+}
+.desc{
+    margin-top: 25rpx;
+    font-size: 30rpx;
+    
+}
+/* 文章正文结束 */

@@ -1,0 +1,47 @@
+<!--index.wxml-->
+<view class="container">
+<!-- 上部推荐开始 -->
+ <view class="comment">
+  <view class="top_comment">
+    <view class="sancan">
+      <view class="comment_title">
+        <text>早中晚餐</text>
+        <text>每日三餐推荐</text>
+      </view>
+      <view class="comment_img">
+        <image src="../../images/sancan.png"></image>
+      </view>
+    </view>
+    <view class="jingpin">
+      <view class="comment_title">
+        <text>精选菜谱</text>
+        <text>一周精选菜谱</text></view>
+      <view class="comment_img">
+        <image src="../../images/shoucangbiaoqian.png"></image>
+      </view>
+    </view>
+  </view>
+  <view class="hot_comment">
+    <view class="hot_title">
+      <text>热门推荐</text>
+      <text>查看更多</text>
+    </view>
+    <view class="hot_cell">
+      <view>
+        <text>凉菜</text>
+      </view>
+      <view>
+        <text>凉菜</text>
+      </view>
+      <view>
+        <text>凉菜</text>
+      </view>
+      <view>
+        <text>凉菜</text>
+      </view>
+    </view>
+  </view>
+
+
+ </view>
+</view>

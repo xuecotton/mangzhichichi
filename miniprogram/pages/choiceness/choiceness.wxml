@@ -1,0 +1,18 @@
+<!--pages/choiceness/choiceness.wxml-->
+<import src="../../template/biglist/biglist.wxml" />
+<view class="container">
+ <!-- 顶部搜索栏开始 -->
+    <view class="search">
+        <view class="input">
+            <image calss="sousuo_icon" src="../../images/sousuo.png"></image>
+            <input type="text" placeholder="请输入菜谱或菜名" focus="false">
+            </input>
+            <button>提交</button>
+        </view>
+    </view>
+    <!--顶部搜索栏结束  -->
+    <view class="biglist">
+         <template  is='biglist' data="{{title:title}}"></template>
+    </view >
+   
+</view>

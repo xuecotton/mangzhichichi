@@ -1,0 +1,13 @@
+<view class="container">
+    <view class='top'>
+        <image src="{{data[0].pic}}"></image>
+    </view>
+    <view class="userInfo">
+        <image src="{{data[0].avatar}}"></image>
+        <view>{{data[0].nickName}}</view>
+    </view>
+    <view class="main">
+        <view class="title"><text>{{data[0].title}}</text></view>
+        <view class="desc"><text>{{data[0].desc}}</text></view>
+    </view>
+</view>
