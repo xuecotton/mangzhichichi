@@ -13,9 +13,12 @@
     align-items: center;
   }
   .input{
-    width: 650rpx;
+    width: 750rpx;
     height: 60rpx;
     margin:0 auto; 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     position: relative;
   }
   .input>image{
@@ -23,31 +26,93 @@
     height: 40rpx;
     position: absolute;
     top:15rpx;
-    left: 50rpx;
+    left: 75rpx;
     transform: translateX(-25rpx);
   }
   .search>.input>input{
-    width: 500rpx;
+    width: 600rpx;
     height: 40rpx;
     background-color: #eee;
     /* border: 1rpx solid #f00; */
     border-radius: 10rpx;
     padding:10rpx 0;
     padding-left:80rpx;
+    margin-left: 25rpx;
     /* 首行缩进 */
     
     letter-spacing: 2rpx;
   }
-  .input>button{
-      position: absolute;
-      width: 200rpx;
+  .input>.btn{
+      /* position: absolute; */
+      width: 100rpx;
       height: 60rpx;
-      top: -10rpx;
-      right: -80rpx;
+      margin:auto;
+      padding:5rpx 0;
+      vertical-align: middle;
+      text-align: center;
+      /* top: -10rpx;
+      right: -80rpx; */
+      margin-left: 25rpx;
       color:red;
   }
   /* 搜索栏样式结束 */
-  /* 列表组件位置 */
-  .list{
-      margin-top: 100rpx;
-  }
+  /* 列表组件样式 */
+  
+  /* 列表样式开始 */
+.list{
+  box-sizing: border-box;
+  background-color: #fff;
+  width: 748rpx;
+  height: auto;
+  margin-top: 100rpx;
+  /* border: 1rpx solid #000; */
+  padding:20rpx 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+.item{
+  width: 700rpx;
+  height:240rpx;
+  /* border:1rpx solid #eae; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding:15rpx;
+  margin:10rpx 0;
+  background-color: #eee;
+}
+.item>image{
+  height: 240rpx;
+  width: 300rpx;
+  /* border: 1rpx solid #afa; */
+}
+.desc{
+  width: 380rpx;
+  height: 240rpx;
+  /* border: 1rpx solid #faf; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+.desc>text:nth-child(1){
+  height: 40rpx;
+  overflow: hidden;
+  font-size: 32rpx;
+  font-weight: 700;
+}
+.desc>text:nth-child(2){
+  height: 75rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 28rpx;
+  font-weight: 600;
+}
+.desc>text:nth-child(3){
+  font-size: 24rpx;
+  color: #999;
+}
+
+/* 列表样式结束 */

@@ -13,11 +13,11 @@ Page({
      */
     onLoad: function (options) {
         // 获取上个页面传递来的参数
-        console.log(options)
+        // console.log(options)
         // 发送请求
         let db=wx.cloud.database().collection('articles');
         db.where({_id:options.id}).get().then(res=>{
-            console.log(res)
+            // console.log(res)
             // 将获取到的数据存到data
             this.setData({data:res.data})
         })

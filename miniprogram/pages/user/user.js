@@ -14,6 +14,7 @@ Page({
     },
 
     getUser(e){
+        
         // 授权登录:
         wx.getSetting({
             complete: (res) => {
@@ -24,7 +25,7 @@ Page({
                         complete: (res) => {
                             success:(res)=>{
                                 this.setData({userInfo:res.userInfo,isLogin:true})
-                                 console.log(res.userInfo)
+                                //  console.log(res.userInfo)
                             }
                         },
                       })
@@ -33,7 +34,7 @@ Page({
             },
           })
         //   查看是否登录,然后显示头像
-        console.log(e.detail.userInfo)
+        // console.log(e.detail.userInfo)
         // 查看是否授权
         if(e.detail.userInfo.nickName){
             

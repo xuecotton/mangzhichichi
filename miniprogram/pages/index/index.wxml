@@ -5,11 +5,10 @@
     <view class="classify" bindtap="toclassify">
       <image class="classify" src="../../images/fenlei.png"></image>
     </view>
-    <view class="input" >
-      <image class="sousuo_icon" src="../../images/sousuo.png"></image>
-      <input type="text" placeholder="请输入菜谱或菜名" focus="{{inputShow}}" bindfocus="toSearchList">
-      </input>
-    </view>
+    <view class="input">
+            <image calss="sousuo_icon" src="../../images/sousuo.png"></image>
+            <view class="finput"  bindtap="toSearchList">请输入菜谱名</view>
+        </view>
     </view>
     <!--顶部搜索栏结束  -->
     <!-- 轮播图开始 -->
@@ -20,8 +19,8 @@
       indicator-active-color="#fff"
       circular="true"
       class="swipers">
-        <swiper-item wx:for="{{carousel}}" wx:key="index">
-          <image mode="aspectFill" src="{{item.pic}}"></image>
+        <swiper-item wx:for="{{carousel}}" wx:key="index" data-id="{{item.fid}}" bindtap="toDesc">
+          <image mode="scaleToFill" src="{{item.pic}}" style="width:100%"></image>
         </swiper-item>
         
       </swiper>
@@ -85,45 +84,20 @@
   </view>
   <view class="main_list">
   <!-- 列表项 -->
-    <view class="main_item">
-      <view class="item_pic">
-        <image src="../../images/swiper01.jpg"></image>
+    <view class="main_item" wx:for="{{res.list}}" wx:key="index" >
+      <view class="item_pic" bindtap="toDesc" data-id="{{item.id}}">
+        <image src="{{item.pic}}"></image>
       </view>
       <view class="item_title">
-        <text>夏日必备清凉解暑苦瓜炒蛋</text>
+        <text>{{item.name}}</text>
       </view>
       <view class="item_desc">
-        <text class="author">鲨雕鱼半藏</text>
-        <text class="collection">555收藏</text>
-        <text class="views_num">6.6万浏览</text>
+        <!-- <text class="author">鲨雕鱼半藏</text> -->
+        <text class="collection">{{94}}收藏</text>
+        <text class="views_num">800浏览</text>
       </view>
     </view>
-    <view class="main_item">
-      <view class="item_pic">
-        <image src="../../images/swiper01.jpg"></image>
-      </view>
-      <view class="item_title">
-        <text>夏日必备清凉解暑苦瓜炒蛋</text>
-      </view>
-      <view class="item_desc">
-        <text class="author">鲨雕鱼半藏</text>
-        <text class="collection">555收藏</text>
-        <text class="views_num">6.6万浏览</text>
-      </view>
-    </view>
-    <view class="main_item">
-      <view class="item_pic">
-        <image src="../../images/swiper01.jpg"></image>
-      </view>
-      <view class="item_title">
-        <text>夏日必备清凉解暑苦瓜炒蛋</text>
-      </view>
-      <view class="item_desc">
-        <text class="author">鲨雕鱼半藏</text>
-        <text class="collection">555收藏</text>
-        <text class="views_num">6.6万浏览</text>
-      </view>
-    </view>
+    <view class='footer'>没有更多了...</view>
   </view>
 </view>
 <!-- 列表开始 -->

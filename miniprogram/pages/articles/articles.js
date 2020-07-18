@@ -15,19 +15,27 @@ Page({
     },
     navToDesc(e){
         // 获取文章id
-        console.log(e.currentTarget.dataset.id)
+        // console.log(e.currentTarget.dataset.id)
         // 跳转并传递id
         wx.navigateTo({
          url: '../artDesc/artDesc?id='+e.currentTarget.dataset.id,
         })
     },
+    // 获取焦点时跳转
+    toSearchList(){
+        wx.navigateTo({
+          url: '../search/search',
+        })
+      },
+    //   获取信息
+    
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
         let db = wx.cloud.database().collection('articles');
         db.get().then(res=>{
-            console.log(res.data);
+            // console.log(res.data);
             this.setData({articles:res.data})
         })
     },
@@ -64,7 +72,13 @@ Page({
      * 页面相关事件处理函数--监听用户下拉动作
      */
     onPullDownRefresh: function () {
-
+        let db = wx.cloud.database().collection('articles');
+        db.get().then(res=>{
+            // console.log(res.data);
+            this.setData({articles:res.data});
+            wx.stopPullDownRefresh;
+        });
+        
     },
 
     /**

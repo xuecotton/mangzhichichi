@@ -16,8 +16,12 @@ Page({
     // 传给列表组件的值
         items:{}
     },
-    toList(){
-        console.log('123')
+    toList(e){
+        let classid=e.target.dataset.id
+        wx.navigateTo({
+          url: '../search/search?classid='+classid,
+        })
+        // console.log(e)
     },
 // 切换标签按钮
 clickTab(e){
@@ -48,8 +52,9 @@ clickTab(e){
           data:{},
           method:'GET',
           success:(res)=>{
-              console.log(res)
+            //   console.log(res)
               this.setData({res:res.data,items:res.data.result[0]})
+              // console.log(this.data.items)
           }
         })
     },
@@ -86,7 +91,7 @@ clickTab(e){
      * 页面相关事件处理函数--监听用户下拉动作
      */
     onPullDownRefresh: function () {
-
+      
     },
 
     /**

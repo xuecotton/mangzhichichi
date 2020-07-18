@@ -1,0 +1,15 @@
+// 云函数入口文件
+const cloud = require('wx-server-sdk')
+
+cloud.init()
+
+// 云函数入口函数
+exports.main = async (event, context) => {
+    const wxContent = cloud.getWXContext()
+    return {
+        event,
+        openid:wxContent.OPENID,
+        appid:wxContent.OPENID,
+        unionid:wxContent.UNIONID,
+    }
+}

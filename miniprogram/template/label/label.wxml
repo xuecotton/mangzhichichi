@@ -8,9 +8,7 @@
                 <view></view>
             </view>
             <view class='lb_items'>
-            <navigator url="../pages/search/search">
-                <view class="items" wx:for="{{list}}" wx:key="index" bindtap="toList">{{item.name}}</view>
-            </navigator>
+                <view class="items" wx:for="{{list}}" wx:key="index"  bindtap="toList">{{item.name}}</view>
             </view>
         </view>
         

@@ -1,0 +1,41 @@
+<!--pages/desc/desc.wxml-->
+<view class="container" wx:if="{{res}}">
+<!-- 封面图 -->
+    <view class='toppic'>
+        <image src="{{res.result.pic}}"></image>
+    </view>
+    <view class="main">
+        <view class='content'>
+            <view class="title">{{res.result.name}}</view>
+            <view class="time">
+                <text>耗时：{{res.result.cookingtime}}，</text>
+                <text>量：{{res.result.peoplenum}}份</text>
+            </view>
+            <view class="desc">
+                <text>{{res.result.content}}</text>
+            </view>
+            <view class="material">
+                <view class="shicai">食材</view>
+                <view wx:for="{{res.result.material}}" wx:key="index">
+                <text>{{item.mname}}</text>
+                <text>{{item.amount}}</text>
+                <!-- <text>右</text> -->
+                </view>
+            </view>
+            <view class='stepbox'>
+            <view class="zuofa">做法</view>
+                <view class="step" wx:for="{{res.result.process}}" wx:key="index">
+                    <image src="{{item.pic}}"></image>
+                    <text>第{{index+1}}步，{{item.pcontent}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <!-- 底部固定栏 -->
+    <view class="footer">
+        <view class="cont">
+            <button bindtap="collect">收藏</button>
+            <button open-type="share">分享</button>
+        </view>
+    </view>
+</view>

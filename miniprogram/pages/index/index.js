@@ -10,9 +10,12 @@ Page({
     logged: false,
     takeSession: false,
     requestResult: '',
+    
     // 轮播图
     carousel:[],
     // 标签跳转参数
+    // 推荐内容
+    res:{}
     
   },
   // 左上角图标跳转
@@ -23,10 +26,17 @@ Page({
   },
   // 获取焦点时跳转
   toSearchList(){
-    console.log('1')
+    // console.log('1')
     wx.navigateTo({
       url: '../search/search',
     })
+  },
+  toDesc(e){
+    let id = e.currentTarget.dataset.id;
+    // console.log(id)
+    wx.navigateTo({
+    url: '../desc/desc?id='+id,
+  })
   },
 // 上方标签跳转
 navTosancan(){
@@ -53,15 +63,34 @@ toclass(){
     let carPic = db.collection('carousel');
     carPic.get({
       success:(res)=>{
-        console.log(res.data);
+        // console.log(res.data);
         this.setData({carousel:res.data})
       }
     })
 
-    
+    wx.request({
+      url:'https://api.jisuapi.com/recipe/byclass?classid=612&start=0&num=10&appkey=57ba84ab07e7a7ae',
+      data:{},
+      method:'GET',
+      success:res=>{
+        // console.log(res);
+        this.setData({res:res.data.result})
+        // console.log(this.data.res)
+      }
+    })
+
 
  
   },
+  // 跳转详情页
+toDesc(e){
+  
+  let id=e.currentTarget.dataset.id;
+  // console.log(id)
+  wx.navigateTo({
+    url: '../desc/desc?id='+id,
+  })
+},
 
   onGetUserInfo: function(e) {
     if (!this.data.logged && e.detail.userInfo) {
@@ -79,14 +108,14 @@ toclass(){
       name: 'login',
       data: {},
       success: res => {
-        console.log('[云函数] [login] user openid: ', res.result.openid)
+        // console.log('[云函数] [login] user openid: ', res.result.openid)
         app.globalData.openid = res.result.openid
         wx.navigateTo({
           url: '../userConsole/userConsole',
         })
       },
       fail: err => {
-        console.error('[云函数] [login] 调用失败', err)
+        // console.error('[云函数] [login] 调用失败', err)
         wx.navigateTo({
           url: '../deployFunctions/deployFunctions',
         })
@@ -115,7 +144,7 @@ toclass(){
           cloudPath,
           filePath,
           success: res => {
-            console.log('[上传文件] 成功：', res)
+            // console.log('[上传文件] 成功：', res)
 
             app.globalData.fileID = res.fileID
             app.globalData.cloudPath = cloudPath
@@ -126,7 +155,7 @@ toclass(){
             })
           },
           fail: e => {
-            console.error('[上传文件] 失败：', e)
+            // console.error('[上传文件] 失败：', e)
             wx.showToast({
               icon: 'none',
               title: '上传失败',

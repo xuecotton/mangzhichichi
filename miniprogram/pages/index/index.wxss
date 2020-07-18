@@ -17,6 +17,8 @@ page {
   display: flex;
   justify-content:start;
   align-items: center;
+  position: fixed;
+  z-index: 9999;
 }
 .classify{
   width: 60rpx;
@@ -42,20 +44,33 @@ page {
   left: 50rpx;
   transform: translateX(-25rpx);
 }
-.search>.input>input{
+/* .over{
+  width: 550rpx;
+  height: 60rpx;
+  top:0rpx;
+  left: 15rpx;
+  background-color:rgba(255,255,255,.0);
+  position: absolute;
+} */
+.search>.input>.finput{
   width: 550rpx;
   height: 40rpx;
   background-color: #eee;
   /* border: 1rpx solid #f00; */
-  border-radius: 30rpx;
-  padding:10rpx 25rpx;
+  border-radius: 10rpx;
+  padding:10rpx 0;
+  padding-left:80rpx;
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
   /* 首行缩进 */
-  text-indent:50rpx;
+  color: #999;
   letter-spacing: 2rpx;
 }
 /* 搜索栏样式结束 */
 /* 轮播图样式开始 */
 .swiper_box{
+  margin-top: 90rpx;
   width: 100%;
   /* height: 480rpx; */
   /* margin:0 15rpx; */
@@ -66,6 +81,8 @@ page {
 .swipers{
   /* width: 100%; */
   /* height:1100rpx; */
+  height: 400rpx;
+  padding:0 10rpx;
 }
 
 .swipers>swiper-item>image{
@@ -225,7 +242,7 @@ page {
 }
 .main_item{
   width: 100%;
-  height: 500rpx;
+  height: 600rpx;
   /* border:1rpx solid #000; */
   display: flex;
   flex-direction: column;
@@ -235,7 +252,7 @@ page {
 }
 .item_pic{
   width: 100%;
-  height: 400rpx;
+  height:500rpx;
   /* border: 1rpx solid #aea; */
 }
 .item_pic>image{
@@ -275,3 +292,8 @@ page {
 }
 
 /* 列表项结束 */
+.footer{
+  width: 100%;
+  margin-top: 25rpx;
+  text-align: center;
+}

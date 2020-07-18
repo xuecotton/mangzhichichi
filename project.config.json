@@ -21,14 +21,15 @@
 			"disablePlugins": [],
 			"outputPath": ""
 		},
-		"useCompilerModule": false,
+		"useCompilerModule": true,
 		"userConfirmedUseCompilerModuleSwitch": false
 	},
 	"appid": "wx1f2d4b60b0726052",
-	"projectname": "%E5%BF%99%E4%B9%8B%E5%90%83%E5%90%83",
+	"projectname": "%E5%81%9A%E8%8F%9C",
 	"libVersion": "2.8.1",
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
+	"cloudfunctionTemplateRoot": "cloudfunctionTemplate",
 	"condition": {
 		"search": {
 			"current": -1,

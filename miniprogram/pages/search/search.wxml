@@ -8,11 +8,22 @@
             <image calss="sousuo_icon" src="../../images/sousuo.png"></image>
             <input type="text" placeholder="请输入菜谱或菜名" value='{{value}}' focus="false" bindinput="getValue">
             </input>
-            <button bindtap="sendRequest">提交</button>
+            <view class="btn" bindtap="sendRequest"><text>提交</text></view>
         </view>
     </view>
     <!--顶部搜索栏结束  -->
     <!-- 列表组件 -->
-<template is="list" class="list"></template>
+<view >
+    <view class="list" wx:if="{{res}}">
+        <view class='item' wx:for="{{res.list}}" wx:key="index" data-id='{{item.id}}' bindtap="toDesc">
+            <image src="{{item.pic}}"></image>
+            <view class="desc">
+                <text>{{item.name}}</text>
+                <text>{{item.tag}}</text>
+                <text>{{item.cookingtime}}</text>
+            </view>
+        </view>
+  </view>
+</view>
     <!-- 列表组件 -->
 </view>

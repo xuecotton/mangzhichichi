@@ -1,6 +1,9 @@
 /* pages/choiceness/choiceness.wxss */
 @import '../../template/biglist/biglist.wxss';
 /* 顶部搜索栏样式 */
+.container{
+  background-color: #eee;
+}
 .search{
     width: 750rpx;
     height: 90rpx;
@@ -24,29 +27,110 @@
     left: 50rpx;
     transform: translateX(-25rpx);
   }
-  .search>.input>input{
-    width: 500rpx;
+  .search>.input>.finput{
+    width: 580rpx;
     height: 40rpx;
     background-color: #eee;
     /* border: 1rpx solid #f00; */
     border-radius: 10rpx;
     padding:10rpx 0;
     padding-left:80rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     /* 首行缩进 */
-    
+    color: #999;
     letter-spacing: 2rpx;
   }
-  .input>button{
-      position: absolute;
-      width: 200rpx;
-      height: 60rpx;
-      top: -10rpx;
-      right: -80rpx;
-      color:red;
-  }
+  
   /* 搜索栏样式结束 */
 
   /* 大列表组件样式 */
   .biglist{
       margin-top:90rpx;
   }
+  .main{
+    margin-top: 20rpx;
+    width: 745rpx;
+    height: auto;
+    /* border: 1rpx solid red; */
+    background-color: #fff;
+  }
+  .main_title{
+    width: 100%;
+    height: 50rpx;
+    margin :0 auto;
+    /* border: 1rpx solid #000; */
+    text-align: center;
+    font-weight: 700;
+  }
+  .main_title>text{
+    font-size: 36rpx;
+    padding-top:15rpx;
+  }
+  .main_title>text::before{
+    content:'-'
+  }
+  .main_title>text::after{
+    content:'-'
+  }
+  .main_list{
+    width: 100%;
+    margin:0 auto;
+    /* border: 1rpx solid red; */
+  }
+  .main_item{
+    width:740rpx;
+    height: 500rpx;
+    /* border:1rpx solid #000; */
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-start; */
+    /* padding:25rpx 15rpx; */
+    /* border-bottom:  1rpx solid #eae; */
+    background-color: #eee;
+    margin-bottom: 15rpx;
+    border-radius: 15rpx;
+  }
+  .item_pic{
+    width: 100%;
+    height: 400rpx;
+    /* border: 1rpx solid #aea; */
+  }
+  .item_pic>image{
+    width: 100%;
+    height: 400rpx;
+  }
+  .item_title{
+    width: 100%;
+    height: 46rpx;
+    padding:5rpx;
+    margin-top: 25rpx;
+    
+    /* border: 1rpx solid red; */
+  }
+  .item_title>text{
+    width: 100%;
+    font-size: 36rpx;
+    font-weight: 700;
+    color: #000;
+    letter-spacing: 1.5rpx;
+    
+  }
+  .item_desc{
+    width: 100%;
+    height: 40rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding:10rpx 0;
+  }
+  .item_desc>text{
+    font-size: 28rpx;
+    color:#999;
+    margin:10rpx 25rpx;
+  
+  }
+  
+  /* 列表项结束 */

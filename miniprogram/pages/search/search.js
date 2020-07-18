@@ -8,9 +8,18 @@ Page({
         // 输入框中的值
         value:''
     },
+
+    // 跳转
+    toDesc(e){
+        // console.log(e)
+        let id = e.currentTarget.dataset.id
+        wx.navigateTo({
+          url: '../desc/desc?id='+id,
+        })
+    },
     // 输入值时,获取到并且放到data
     getValue(e){
-        console.log(e.detail.value)
+        // console.log(e.detail.value)
         this.setData({
             value:e.detail.value
         })
@@ -21,14 +30,40 @@ Page({
         if(this.data.value==""){return}else{
             // 发送请求,并且将获取到的数据放到data
             // ....
-            console.log('发送完了')
+            wx.request({
+              url: 'https://api.jisuapi.com/recipe/search?keyword='+this.data.value+'&num=10&appkey=57ba84ab07e7a7ae',
+              data:{},
+              method:'GET',
+              success:res=>{
+                //   console.log(res)
+                  this.setData({
+                      res:res.data.result
+                  })
+              }
+            })
+            // console.log('发送完了')
         }
     },
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+        // console.log(options)
+        let classid = options.classid;
+        this.setData({classid:classid})
+        if(this.data.classid){
+            wx.request({
+                url: 'https://api.jisuapi.com/recipe/byclass?classid='+classid+'&start=1&num=10&appkey=57ba84ab07e7a7ae',
+                //   url: 'https://api.jisuapi.com/recipe/byclass?classid=612&start=1&num=10&appkey=57ba84ab07e7a7ae',
+                  data:{},
+                  method:'GET',
+                  success:res=>{
+                    //   console.log(res)
+                      this.setData({res:res.data.result})
+                  }
+                })
+        }
+       
     },
 
     /**

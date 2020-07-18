@@ -3,8 +3,7 @@
     <view class="search">
         <view class="input">
             <image calss="sousuo_icon" src="../../images/sousuo.png"></image>
-            <input type="text" placeholder="请输入菜谱或菜名" focus="false">
-        </input>
+            <view class="finput"  bindtap="toSearchList">请输入菜谱名</view>
         </view>
     </view>
     <!--顶部搜索栏结束  -->

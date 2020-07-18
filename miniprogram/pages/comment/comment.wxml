@@ -8,7 +8,16 @@
   </view>
 <!-- 上方选显卡结束 -->
 
-<template is="list" data="{{title:'1',price:'1000'}}" wx:if="{{currentTab==0}}">1</template>
-<template is="list" data="{{title:'2',price:'2000'}}" wx:elif="{{currentTab==1}}">2</template>
-<template is="list" data="{{title:'3',price:'3000'}}" wx:else="{{currentTab==2}}">3</template>
+<view >
+    <view class="list" wx:if="{{res}}">
+        <view class='item' wx:for="{{res.list}}" wx:key="index" data-id='{{item.id}}' bindtap="toDesc">
+            <image src="{{item.pic}}"></image>
+            <view class="desc">
+                <text>{{item.name}}</text>
+                <text>{{item.tag}}</text>
+                <text>{{item.cookingtime}}</text>
+            </view>
+        </view>
+  </view>
+</view>
 </view>

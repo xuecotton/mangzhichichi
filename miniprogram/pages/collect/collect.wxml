@@ -7,5 +7,35 @@
     <view id="views" class="{{selected_collect==2?selected:disabled}}" bindtap="jilu">我的分享</view>
   </view>
 <!-- 上方选显卡结束 -->
-<template is="list" ></template>
+<!-- 列表组件 -->
+<!-- 收藏 -->
+<view wx:if="{{selected_collect==1}}">
+    <view class="list" wx:if="{{colls}}">
+    <view wx:for="{{colls}}" wx:key="index">
+      <view class='item'  data-id='{{item.hid}}' bindtap="toDesc">
+            <image src="{{item.pic}}"></image>
+            <view class="desc">
+                <text>{{item.name}}</text>
+                <text>{{item.tag}}</text>
+                <!-- <text>{{item.cookingtime}}</text> -->
+            </view>
+        </view>
+    </view>
+        
+  </view>
+</view>
+<!-- 分享 -->
+<view wx:if="{{selected_collect==2}}">
+    <view class="list" wx:if="{{art}}">
+        <view class='item' wx:for="{{art}}" wx:key="index" data-id='{{item._id}}' bindtap="toArt">
+            <image src="{{item.pic}}"></image>
+            <view class="desc">
+                <text>{{item.title}}</text>
+                <text>{{item.nickName}}</text>
+                <!-- <text>{{item.cookingtime}}</text> -->
+            </view>
+        </view>
+  </view>
+</view>
+    <!-- 列表组件 -->
 </view>

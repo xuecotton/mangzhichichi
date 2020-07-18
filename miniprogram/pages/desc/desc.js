@@ -1,48 +1,58 @@
-// pages/comment/comment.js
+// pages/desc/desc.js
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-        selected:'selected',
-        currentTab:0,
-        classid:[562,563,565]
+
+        // 存放数据res
+        
     },
-clickTab:function(e){
-    var current =e.currentTarget.dataset.current;
-    this.setData({
-        currentTab:current,
-    });
-    wx.request({
-      url: 'https://api.jisuapi.com/recipe/byclass?classid='+this.data.classid[current]+'&start=0&num=10&appkey=57ba84ab07e7a7ae',
-      success:res=>{
-        //   console.log(res);
-          this.setData({
-              res:res.data.result
-          })
-      }
+// 收藏
+collect(){
+    // 获取当前页面信息
+   let id = this.data.res.result.id;
+   let name = this.data.res.result.name;
+   let pic = this.data.res.result.pic;
+   let tag =this.data.res.result.tag;
+   let content = this.data.res.result.content;
+//   请求
+let db = wx.cloud.database().collection('collection');
+db.add({
+    data:{
+        hid:id,
+        name:name,
+        pic:pic,
+        tag:tag,
+        content:content
+    }
+}).then(res=>{
+    wx.showModal({
+      title:'提示',
+      content:'收藏成功'
     })
-},
-toDesc(e){
-  let id = e.currentTarget.dataset.id;
-  // console.log(id)
-  wx.navigateTo({
-    url: '../desc/desc?id='+id,
-  })
+})
+
+
+
 },
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
+        // console.log(options)
+        let id = options.id;
         wx.request({
-          url: 'https://api.jisuapi.com/recipe/byclass?classid=562&start=0&num=10&appkey=57ba84ab07e7a7ae',
+          url: 'https://api.jisuapi.com/recipe/detail?id='+id+'&appkey=57ba84ab07e7a7ae',
+        //   url: 'https://api.jisuapi.com/recipe/detail?id=5&appkey=57ba84ab07e7a7ae',
           data:{},
+          method:'GET',
           success:res=>{
-            //   console.log(res);
               this.setData({
-                res:res.data.result
-            })
+                  res:res.data
+              })
+            //   console.log(res)
           }
         })
     },

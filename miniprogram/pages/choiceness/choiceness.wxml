@@ -5,14 +5,37 @@
     <view class="search">
         <view class="input">
             <image calss="sousuo_icon" src="../../images/sousuo.png"></image>
-            <input type="text" placeholder="请输入菜谱或菜名" focus="false">
-            </input>
-            <button>提交</button>
+            <view class="finput"  bindtap="toSearchList">请输入菜谱名</view>
         </view>
     </view>
     <!--顶部搜索栏结束  -->
-    <view class="biglist">
-         <template  is='biglist' data="{{title:title}}"></template>
+    <view class="biglist" >
+<view class="main">
+  <view class="main_title">
+    <text>{{title}}</text>
+  </view>
+  <view class="main_list" wx:if="{{res}}">
+    <!-- 列表项 -->
+    <view   wx:for="{{res.list}}" wx:key="index">
+      <view data-id="{{item.id}}" class="main_item" data-id='{{item.id}}' bindtap="toDesc">
+        <view class="item_pic">
+          <image src="{{item.pic}}"></image>
+        </view>
+        <view class="item_title">
+          <text>{{item.name}}</text>
+        </view>
+        <view class="item_desc">
+          <text class="author">{{item.cookingtime}}</text>
+          <text class="collection">{{item.peoplenum}}</text>
+          <!-- <text class="views_num">6.6万浏览</text> -->
+        </view>
+      </view>
+    </view>
+
+  </view>
+  
+</view>
+<!-- 列表开始 -->
     </view >
    
 </view>

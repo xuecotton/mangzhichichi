@@ -43,7 +43,7 @@ updateValue(e){
                     // console.log(res.fileID)
                       this.setData({pic:res.fileID,isok:true});
                     //   图片上传成功
-                   console.log(this.data.userInfo)
+                  //  console.log(this.data.userInfo)
 
                   }
               })

@@ -1,0 +1,111 @@
+/* pages/desc/desc.wxss */
+.container{
+    width: 100%;
+    height: 100%;
+}
+.toppic{
+    width: 100%;
+    height: 500rpx;
+}.toppic>image{
+    width: 100%;
+    height: 100%;
+}
+.main{
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    /* margin-top: 25rpx; */
+    /* padding: 0 25rpx; */
+    /* margin:25rpx auto; */
+    margin-bottom: 100rpx;
+}
+.content{
+    width: 95%;
+    height: 100%;
+    margin:25rpx auto;
+}
+.title{
+    font-size: 46rpx;
+    font-weight: 700;
+}
+.time{
+    margin-top: 25rpx;
+}
+.desc{
+    width: 100%;
+    height: auto;
+    margin: 25rpx 0;
+}
+.material{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.material>view{
+    width: 700rpx;
+    height: 90rpx;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 1rpx solid #aaa;
+}
+.shicai{
+    font-size: 36rpx;
+    font-weight: 700;
+}
+.shicai>text{
+    display: flex;
+    /* justify-content: start; */
+    width: 230rpx;
+}
+.stepbox{
+    width: 100%;
+    height: auto;
+    margin-top: 45rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: start;
+}
+.zuofa{
+    font-size: 36rpx;
+    font-weight: 700;
+}
+.step{
+    width: 100%;
+    height: auto;
+    margin: 15rpx 0;
+}
+.step>image{
+    width: 100%;
+    height: 450rpx;
+}
+.footer{
+    width: 100%;
+    height: 80rpx;
+    position: fixed;
+    bottom: 0;
+}
+.cont{
+    width: 100%;
+    height: 80rpx;
+    display: flex;
+    flex-direction: row;
+    
+}
+.cont>button{
+    
+    width: 50%;
+    color: #fff;
+    /* vertical-align: middle; */
+    border-radius: 0;
+}
+.cont>button:nth-child(1){
+    background-color:orange;
+}
+.cont>button:nth-child(2){
+    background-color: red;
+}

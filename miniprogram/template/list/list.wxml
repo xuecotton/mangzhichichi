@@ -1,15 +1,4 @@
 <!-- 下方列表开始 -->
-<template name="list">
-    <view class="list">
-        <view class='item'>
-            <image src="../../images/water1.jpg"></image>
-            <view class="desc">
-                <text>{{title}}</text>
-                <text>{{price}}</text>
-                <text>点赞量:123  浏览量: 123</text>
-            </view>
-        </view>
-  </view>
-</template>
+
   
 <!-- 下方列表结束 -->

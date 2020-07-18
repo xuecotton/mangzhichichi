@@ -5,19 +5,33 @@ Page({
      * 页面的初始数据
      */
     data: {
-        title:'精品推荐'
+        title:'精品推荐',
+        res:[]
     },
-
+// 获取焦点时跳转
+toSearchList(){
+    wx.navigateTo({
+      url: '../search/search',
+    })
+  },
+  toDesc(e){
+    let id = e.currentTarget.dataset.id;
+    // console.log(id)
+    wx.navigateTo({
+      url: '../desc/desc?id='+id,
+    })
+  },
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-        // 接受上个页面传来的数据
-        const eventChannel = this.getOpenerEventChannel()
-        eventChannel.on('sendmessage', function(data) {
-            console.log(data)
-            // this.setData({title:'data.title'})
-          })
+        wx.request({
+          url: 'https://api.jisuapi.com/recipe/byclass?classid=612&start=0&num=10&appkey=57ba84ab07e7a7ae',
+          success:res=>{
+              // console.log(res)
+              this.setData({res:res.data.result})
+          }
+        })
     },
 
     /**
